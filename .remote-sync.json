@@ -1,0 +1,16 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "agungdp.agri.web.id",
+  "port": "22",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "agungdp",
+  "password": "jancokkabeh",
+  "watch": [],
+  "transport": "scp",
+  "target": "/home/agungdp/iot"
+}

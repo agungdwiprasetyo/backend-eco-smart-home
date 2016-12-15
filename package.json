@@ -1,0 +1,19 @@
+{
+  "name": "ECO Smart Home",
+  "version": "1.0.0",
+  "description": "NodeJS Back End for Eco Smart Home",
+  "author": "localhost ilkom ipb",
+  "license": "MIT",
+  "dependencies": {
+    "blob-stream": "^0.1.3",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^7.1.9",
+    "mysql": "^2.9.0",
+    "socket.io": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agungdp22/backend-eco-smart-home.git"
+  }
+}
