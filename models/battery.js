@@ -22,7 +22,7 @@ function Battery() {
     });
   };
 
-  this.create = function(req, res) {
+  this.post = function(req, res) {
     connection.acquire(function(err, con) {
       var creds = [req.id_user, req.id_rumah, req.kapasitas, req.datetime];
       var query = 'insert into battery (id_user, id_rumah, kapasitas, datetime) values (?, ?, ?, ?)';

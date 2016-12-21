@@ -11,7 +11,7 @@ function Safe() {
     });
   };
 
-  this.create = function(req, res) {
+  this.post = function(req, res) {
     connection.acquire(function(err, con) {
       var creds = [req.id_user, req.status_safe, req.datetime];
       var query = 'insert into safe_mode (id_user, status_safe, datetime) values (?, ?, ?)';
