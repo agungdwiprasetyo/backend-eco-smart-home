@@ -1,4 +1,5 @@
 var connection = require('../connection');
+var socketio = require('../socket/socket-io');
 
 function Perangkat() {
 
@@ -29,17 +30,17 @@ function Perangkat() {
   };
 
   this.update = function(req, res) {
+    var data = [parseInt(req.deviceStatus), parseInt(req.deviceId)];
+    socketio.sendKendali(data); // emit to socket-io
     connection.acquire(function(err, con) {
-      var creds = [req.nama_perangkat, req.id_perangkat];
-      var query = 'update perangkat set nama_perangkat = ? where id_perangkat = ?';
-
-      con.query(query, creds, function(err, result) {
+      var query = 'UPDATE perangkat SET deviceStatus = ? WHERE deviceId = ?';
+      con.query(query, data, function(err, result) {
         con.release();
-
+        console.log("data = "+data);
         if (err) {
-          res.send({status: 1, message: 'Update failed'});
+          res.send({status: 0, message: 'Update failed'});
         } else {
-          res.send({status: 0, message: 'Update successfully'});
+          res.send({status: 1, message: 'Update successfully'});
         }
       });
     });
