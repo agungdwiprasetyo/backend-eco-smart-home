@@ -1,19 +1,30 @@
 {
-  "name": "ECO Smart Home",
+  "name": "ECO-Smart-Home",
   "version": "1.0.0",
-  "description": "NodeJS Back End for Eco Smart Home",
+  "description": "Node.js Back End for Eco Smart Home",
   "author": "localhost ilkom ipb",
   "license": "MIT",
   "dependencies": {
-    "blob-stream": "^0.1.3",
-    "body-parser": "^1.14.1",
     "express": "^4.13.3",
+    "blob-stream": "^0.1.3",
+    "debug": "2.2.0",
+    "engine.io": "1.7.2",
+    "has-binary": "0.1.7",
+    "object-assign": "4.1.0",
+    "body-parser": "^1.14.1",
     "jsonwebtoken": "^7.1.9",
     "mysql": "^2.9.0",
-    "socket.io": "^1.5.1"
+    "object-assign": "4.1.0",
+    "socket.io": "^1.5.1",
+    "socket.io-adapter": "0.4.0",
+    "socket.io-client": "1.5.1",
+    "socket.io-parser": "2.3.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agungdp22/backend-eco-smart-home.git"
+    "url": "https://github.com/agungdwiprasetyo/backend-eco-smart-home.git"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
   }
 }
